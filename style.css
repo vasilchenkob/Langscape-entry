@@ -1,0 +1,183 @@
+@charset "utf-8";
+/* CSS Document */
+html,
+body,
+#map {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+/* Style the header */
+header {
+    background-color: DodgerBlue;
+    padding: 3px;
+    text-align: left;
+    font-size: 35px;
+    color: white;
+	font-family: Roboto,Arial,sans-serif;
+
+}
+
+p {
+    margin: 15px;
+}
+
+#map_side {
+	font-size: 15px;
+	text-align: center;
+	font-family: Roboto,Arial,sans-serif;
+}
+
+/* Zoom control buttons */
+#countryZoomUI, #provinceZoomUI, #cityZoomUI {
+	background-color: #fff;
+	border: 2px solid #fff;
+	border-radius: 3px;
+	box-shadow: 0 2px 6px rgba(0,0,0,.3);
+	cursor: pointer;
+	float: left;
+	margin-bottom: 22px;
+	text-align: center;
+}
+#countryZoomText, #provinceZoomText, #cityZoomText {
+	color: rgb(25,25,25);
+	font-family: Roboto,Arial,sans-serif;
+	font-size: 15px;
+	line-height: 25px;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+#provinceZoomUI, #cityZoomUI {
+	margin-left: 12px;
+}
+	  
+.controls {
+	margin-top: 0px;
+	border: 1px solid transparent;
+	border-radius: 2px 0 0 2px;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	height: 32px;
+	outline: none;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+/* Location search bar */
+#pac-input {
+	background-color: #fff;
+	font-family: Roboto;
+	font-size: 15px;
+	font-weight: 300;
+	margin-left: 12px;
+	padding: 0 11px 0 13px;
+	text-overflow: ellipsis;
+	width: 400px;
+}
+
+.autocomplete {
+  /*the container must be positioned relative:*/
+  position: relative;
+  display: inline-block;
+}
+
+input {
+  border: 1px solid transparent;
+  background-color: #f1f1f1;
+  padding: 10px;
+  font-size: 16px;
+}
+
+input[type=text] {
+  background-color: #f1f1f1;
+  width: 100%;
+}
+
+input[type=submit] {
+  background-color: DodgerBlue;
+  color: #fff;
+  cursor: pointer;
+}
+
+.autocomplete-items {
+  position: absolute;
+  border: 1px solid #d4d4d4;
+  border-bottom: none;
+  border-top: none;
+  z-index: 99;
+  /*position the autocomplete items to be the same width as the container:*/
+  top: 100%;
+  left: 0;
+  right: 0;
+
+	max-height: 300px;
+	overflow-y: scroll;
+}
+
+.autocomplete-items div {
+  padding: 10px;
+  cursor: pointer;
+  background-color: #fff; 
+  border-bottom: 1px solid #d4d4d4; 
+}
+
+.autocomplete-items div:hover {
+  /*when hovering an item:*/
+  background-color: #e9e9e9; 
+}
+
+.autocomplete-active {
+  /*when navigating through the items using the arrow keys:*/
+  background-color: DodgerBlue !important; 
+  color: #ffffff; 
+}
+
+
+/*Popup Form*/
+.ui-widget {
+    font-family: Roboto,Arial,sans-serif !important;
+    font-size: .8em;
+}
+
+.ui-widget-content {
+    background: CC99FF;
+  /*Change the dialog border color here*/
+    border: 1px solid DodgerBlue !important;
+    color: #222222;
+}
+
+.ui-dialog {
+    left: 0;
+    outline: 0 none;
+    padding: 0 !important;
+    position: absolute;
+    top: 0;
+}
+
+#success {
+    padding: 0;
+    margin: 0; 
+}
+
+.ui-dialog .ui-dialog-content {
+    background: none repeat scroll 0 0 transparent;
+    border: 0 none;
+    overflow: auto;
+    position: relative;
+    padding: 0 !important;
+}
+
+.ui-widget-header {
+  /*Change the Header color here*/
+    background: DodgerBlue !important;
+    border: 0;
+    color: #fff !important;
+    font-size: 25px !important;
+	font-family: Roboto,Arial,sans-serif !important;
+
+}
+
+.ui-dialog .ui-dialog-titlebar {
+    padding: 0.1em .5em;
+    position: relative;
+        font-size: 1em;
+}

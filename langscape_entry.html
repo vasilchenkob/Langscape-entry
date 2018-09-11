@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<link href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.min.css" rel="stylesheet" type="text/css" />
+	<title>Langscape Entry</title>
+</head>
+
+<body>
+
+<header>
+Langscape
+</header>
+
+    <div id="wrapper">
+    <form action="javascript:saveData();" method="post">
+     <!--   <form action="javascript:saveData();" method="post"> -->
+    <p>
+    <label for="context">This language is mostly used...</label><br />
+    <input type="checkbox" name="context" value="household" class="context"/> at home by family.<br />
+    <input type="checkbox" name="context" value="school" class="context"/> at school by teachers.<br />
+    <input type="checkbox" name="context" value="govt" class="context"/> in courts and government documents.<br /><br/>
+    <label for="gender">This language is used by:</label><br/>
+        <input type="radio" name="gender" value="both">Both men and women.</input><br/>
+        <input type="radio" name="gender" value="men">Mostly men.</input><br/>
+        <input type="radio" name="gender" value="women">Mostly women.</input><br/>
+        <input type="radio" name="gender" value="notsure" checked>I'm not sure.</input><br/><br/>
+
+	<input id="submit" type="submit" value="Submit">
+    </p>
+	</form>
+    </div>
+
+
+    <div id="map_side" style="float:left; width:30%; height:100%">
+    <p>
+    <strong>Select a language,</strong> then highlight the area on the map where the language is spoken 
+    <em>(click to select and deselect individual grid squares, hold down <strong>Shift</strong> to color)</em>.
+    
+    
+    <form autocomplete="off" action="/action_page.php">
+	  <div class="autocomplete" style="width:300px;">
+	    <input id="myInput" type="text" name="myLang" placeholder="Language">
+	  </div>
+      <p>
+	  <input type="submit" onclick="submitData()" value="Continue">
+	</form>
+    
+
+    </div>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
+	<input id="pac-input" class="controls" type="text" placeholder="Location Search">
+	<div class="container" id="map" style="float:left; width:70%; height:100%"></div>
+
+
+<script type="text/javascript" src="sc.js"></script>
+
+</body>
+</html>
